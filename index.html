@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Taksim Point | فرع القنفذة</title>
+    <title>Taksim Point | فرع أبو عريش</title>
+    <meta name="description" content="منيو تقسيم بوينت فرع أبو عريش، حي الروضة. تصفح الأطباق والأسعار من نفس قائمة تقسيم بوينت.">
     
     <link rel="icon" type="image/png" href="https://cdn.phototourl.com/free/2026-04-06-d0b6c388-fcdf-40fd-a7dc-56a84b8309a2.png">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -83,7 +84,7 @@
     <nav class="fixed top-0 w-full z-[100] glass-nav px-3 py-3 flex justify-between items-center" x-show="view !== 'explore'">
         <div class="flex items-center gap-2">
             <img src="https://cdn.phototourl.com/free/2026-04-06-d0b6c388-fcdf-40fd-a7dc-56a84b8309a2.png" alt="Taksim" class="h-8 object-contain">
-            <span class="text-[9px] font-black text-brand-gold bg-white/5 px-2 py-1 rounded border border-[var(--border-color)]">فرع القنفذة</span>
+            <span class="text-[9px] font-black text-brand-gold bg-white/5 px-2 py-1 rounded border border-[var(--border-color)]">فرع أبو عريش</span>
         </div>
         <div class="flex items-center gap-1.5">
             <button @click="playSound('click'); scrollToSmartGrill()" class="most-requested-btn"><span>🔥</span> الأكثر طلباً</button>
@@ -124,7 +125,7 @@
     <div x-show="showQRModal" x-cloak class="fixed inset-0 z-[200] bg-black/90 flex flex-col items-center justify-center p-6 backdrop-blur-md">
         <button @click="showQRModal = false" class="absolute top-6 right-6 text-white text-3xl font-black">✕</button>
         <div class="theme-card border-[var(--border-color)] p-8 rounded-2xl flex flex-col items-center shadow-[0_0_40px_rgba(232,217,182,0.1)]">
-            <h2 class="font-black text-xl mb-1 text-center text-brand-gold">تقسيم بوينت | فرع القنفذة</h2>
+            <h2 class="font-black text-xl mb-1 text-center text-brand-gold">تقسيم بوينت | فرع أبو عريش</h2>
             <div class="bg-white p-3 rounded-xl mb-6">
                 <img :src="'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(window.location.href)" class="w-48 h-48">
             </div>
@@ -134,14 +135,14 @@
 
     <div x-show="isLoading" class="fixed inset-0 z-[200] bg-[var(--bg-main)] flex flex-col items-center justify-center">
         <img src="https://cdn.phototourl.com/free/2026-04-06-d0b6c388-fcdf-40fd-a7dc-56a84b8309a2.png" class="h-20 mb-6 animate-pulse">
-        <div class="text-brand-gold text-sm font-black tracking-widest uppercase">Taksim Point Al-Qunfudhah...</div>
+        <div class="text-brand-gold text-sm font-black tracking-widest uppercase">Taksim Point Abu Arish...</div>
     </div>
 
     <div x-show="view === 'home' && !isLoading" class="pb-32 pt-24">
         <section class="px-6 mb-8 text-center">
             <img src="https://cdn.phototourl.com/free/2026-04-06-d0b6c388-fcdf-40fd-a7dc-56a84b8309a2.png" class="h-20 mx-auto mb-6 object-contain">
-            <h1 class="text-2xl font-black mb-4 text-brand-gold tracking-wide">تقسيم بوينت | فرع القنفذة</h1>
-            <p class="text-sm text-brand-gold opacity-90 leading-relaxed font-medium">استمتع بأفضل المشويات التركية والمأكولات العالمية في فرعنا بالقنفذة.</p>
+            <h1 class="text-2xl font-black mb-4 text-brand-gold tracking-wide">تقسيم بوينت | فرع أبو عريش</h1>
+            <p class="text-sm text-brand-gold opacity-90 leading-relaxed font-medium">استمتع بأفضل المشويات التركية والمأكولات العالمية في فرعنا بأبو عريش، حي الروضة.</p>
         </section>
 
         <section class="relative h-[30vh] w-full mb-10 px-4">
@@ -162,10 +163,11 @@
         </section>
 
         <section class="px-6 mb-6">
-            <h3 class="text-lg font-black mb-4 text-center text-brand-gold tracking-wide">موقعنا بالقنفذة</h3>
+            <h3 class="text-lg font-black mb-4 text-center text-brand-gold tracking-wide">موقعنا في حي الروضة، أبو عريش</h3>
             <div class="overflow-hidden rounded-2xl shadow-xl border border-[var(--border-color)] p-1 bg-[var(--card-bg)]">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.386486430979!2d41.07816606016587!3d19.134552382156638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15e68f00666986fd%3A0xc81a3e382a661914!2z2YXYt9i52YUg2KrZgtiz2YrZhSDYqNmI2YrZhtiqIHwgVGFrc2ltcG9pbnQgcmVzdGF1cmFudHM!5e0!3m2!1sar!2ssa!4v1776361993640!5m2!1sar!2ssa" width="100%" height="200" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe title="خريطة حي الروضة في أبو عريش" src="https://www.google.com/maps?q=%D8%AD%D9%8A%20%D8%A7%D9%84%D8%B1%D9%88%D8%B6%D8%A9%2C%20%D8%A3%D8%A8%D9%88%20%D8%B9%D8%B1%D9%8A%D8%B4%2C%20%D8%AC%D8%A7%D8%B2%D8%A7%D9%86&amp;z=14&amp;output=embed" width="100%" height="200" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
             </div>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=%D8%AD%D9%8A%20%D8%A7%D9%84%D8%B1%D9%88%D8%B6%D8%A9%2C%20%D8%A3%D8%A8%D9%88%20%D8%B9%D8%B1%D9%8A%D8%B4%2C%20%D8%AC%D8%A7%D8%B2%D8%A7%D9%86" target="_blank" rel="noopener noreferrer" class="block mt-3 text-center text-sm font-bold text-brand-gold underline">عرض حي الروضة على خرائط Google</a>
         </section>
 
         <div class="px-4 mb-10">
@@ -376,7 +378,7 @@
                                     return {
                                         id: id, category: cat, name: (cols[2] || '').trim(),
                                         price: (cols[3] || '').trim(), description: (cols[5] || '').trim(),
-                                        image: (cols[6] || '').trim(), available: cols.length > 10 ? (cols[10] || '').trim() : '' // توفر القنفذة
+                                        image: (cols[6] || '').trim(), available: cols.length > 10 ? (cols[10] || '').trim() : ''
                                     }
                                 }).filter(i => i.id.startsWith('TP-'));
                                 
@@ -428,13 +430,13 @@
                     this.playSound('pop');
                     if(this.likes.includes(item.id)) { this.likes = this.likes.filter(id => id !== item.id); delete this.quantities[item.id]; } 
                     else { this.likes.push(item.id); this.quantities[item.id] = 1; }
-                    localStorage.setItem('qunf_likes_v10', JSON.stringify(this.likes));
-                    localStorage.setItem('qunf_qty_v10', JSON.stringify(this.quantities));
+                    localStorage.setItem('abu_arish_likes_v10', JSON.stringify(this.likes));
+                    localStorage.setItem('abu_arish_qty_v10', JSON.stringify(this.quantities));
                 },
                 isLiked(id) { return this.likes.includes(id); },
                 updateQty(id, d) { 
                     this.quantities[id] = Math.max(1, (this.quantities[id] || 1) + d); 
-                    localStorage.setItem('qunf_qty_v10', JSON.stringify(this.quantities));
+                    localStorage.setItem('abu_arish_qty_v10', JSON.stringify(this.quantities));
                 },
                 get likedItemsList() { return this.likes.map(id => this.allRawData.find(i => i.id === id)).filter(Boolean); },
                 calculateTotal() {
@@ -445,8 +447,8 @@
                 copyBranchUrl() { navigator.clipboard.writeText(window.location.origin).then(() => alert('تم النسخ!')); },
                 
                 initApp() { 
-                    const saved = localStorage.getItem('qunf_likes_v10'); if(saved) this.likes = JSON.parse(saved);
-                    const savedQ = localStorage.getItem('qunf_qty_v10'); if(savedQ) this.quantities = JSON.parse(savedQ);
+                    const saved = localStorage.getItem('abu_arish_likes_v10'); if(saved) this.likes = JSON.parse(saved);
+                    const savedQ = localStorage.getItem('abu_arish_qty_v10'); if(savedQ) this.quantities = JSON.parse(savedQ);
                     this.changeLanguage(); 
                     setInterval(() => { this.startAutoScroll(); }, 5000);
                 },
