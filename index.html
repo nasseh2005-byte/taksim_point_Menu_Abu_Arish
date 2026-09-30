@@ -149,7 +149,8 @@
             <div class="slider-container h-full no-scrollbar rounded-xl shadow-2xl border border-[var(--border-color)]" id="hero-slider">
                 <template x-for="(item, index) in heroOffers" :key="item.id">
                     <div class="slide relative h-full theme-card rounded-xl overflow-hidden">
-                        <img :src="item.image" loading="lazy" class="w-full h-full object-cover opacity-90">
+                        <img x-show="item.image" :src="item.image" @error="$event.target.style.display = 'none'" loading="lazy" class="w-full h-full object-cover opacity-90">
+                        <img x-show="!item.image" src="https://cdn.phototourl.com/free/2026-04-06-d0b6c388-fcdf-40fd-a7dc-56a84b8309a2.png" alt="تقسيم بوينت" class="w-full h-full object-contain p-8 opacity-35">
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-5">
                             <h2 class="text-xl font-black mb-1 text-brand-gold drop-shadow-md tracking-wide" x-text="item.name"></h2>
                             <div class="flex justify-between items-center">
