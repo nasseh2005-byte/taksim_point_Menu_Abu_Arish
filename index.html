@@ -331,27 +331,27 @@
             return {
                 isLoading: true, view: 'home', currentLang: 'ar', 
                 showSearchModal: false, showQRModal: false, showInvoiceModal: false, searchQuery: '',        
-                showCatBar: true, lastScroll: 0,
+                showCatBar: true, lastScroll: 0, menuRequestId: 0,
                 allRawData: [], activeMenuItems: [], activeExploreItems: [], heroOffers: [], categoryBgs: {}, likes: [], quantities: {},
                 targetHeroIds: ['TP-116', 'TP-185', 'TP-186', 'TP-003', 'TP-004'],
 
                 langLinks: {
-                    ar: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSVNQZ9He56FI0mC4d1sODaF45FLXpqLova9aBVgQHFzzFzNiwJP_F1BSDBntCI6s5iaz37aGlK2Q3F/pub?gid=2026156602&single=true&output=csv',
-                    en: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSVNQZ9He56FI0mC4d1sODaF45FLXpqLova9aBVgQHFzzFzNiwJP_F1BSDBntCI6s5iaz37aGlK2Q3F/pub?gid=1709873212&single=true&output=csv',
-                    tr: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSVNQZ9He56FI0mC4d1sODaF45FLXpqLova9aBVgQHFzzFzNiwJP_F1BSDBntCI6s5iaz37aGlK2Q3F/pub?gid=932024028&single=true&output=csv',
-                    es: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSVNQZ9He56FI0mC4d1sODaF45FLXpqLova9aBVgQHFzzFzNiwJP_F1BSDBntCI6s5iaz37aGlK2Q3F/pub?gid=2126154876&single=true&output=csv',
-                    ru: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSVNQZ9He56FI0mC4d1sODaF45FLXpqLova9aBVgQHFzzFzNiwJP_F1BSDBntCI6s5iaz37aGlK2Q3F/pub?gid=1383179966&single=true&output=csv',
-                    ur: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSVNQZ9He56FI0mC4d1sODaF45FLXpqLova9aBVgQHFzzFzNiwJP_F1BSDBntCI6s5iaz37aGlK2Q3F/pub?gid=1356221249&single=true&output=csv',
-                    hi: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSVNQZ9He56FI0mC4d1sODaF45FLXpqLova9aBVgQHFzzFzNiwJP_F1BSDBntCI6s5iaz37aGlK2Q3F/pub?gid=1947060246&single=true&output=csv',
-                    fr: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSVNQZ9He56FI0mC4d1sODaF45FLXpqLova9aBVgQHFzzFzNiwJP_F1BSDBntCI6s5iaz37aGlK2Q3F/pub?gid=1967929524&single=true&output=csv',
-                    de: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSVNQZ9He56FI0mC4d1sODaF45FLXpqLova9aBVgQHFzzFzNiwJP_F1BSDBntCI6s5iaz37aGlK2Q3F/pub?gid=330421505&single=true&output=csv',
-                    zh: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSVNQZ9He56FI0mC4d1sODaF45FLXpqLova9aBVgQHFzzFzNiwJP_F1BSDBntCI6s5iaz37aGlK2Q3F/pub?gid=597359201&single=true&output=csv',
-                    ja: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSVNQZ9He56FI0mC4d1sODaF45FLXpqLova9aBVgQHFzzFzNiwJP_F1BSDBntCI6s5iaz37aGlK2Q3F/pub?gid=1140262731&single=true&output=csv',
-                    ko: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSVNQZ9He56FI0mC4d1sODaF45FLXpqLova9aBVgQHFzzFzNiwJP_F1BSDBntCI6s5iaz37aGlK2Q3F/pub?gid=961009172&single=true&output=csv',
-                    it: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSVNQZ9He56FI0mC4d1sODaF45FLXpqLova9aBVgQHFzzFzNiwJP_F1BSDBntCI6s5iaz37aGlK2Q3F/pub?gid=1885756520&single=true&output=csv',
-                    vi: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSVNQZ9He56FI0mC4d1sODaF45FLXpqLova9aBVgQHFzzFzNiwJP_F1BSDBntCI6s5iaz37aGlK2Q3F/pub?gid=37768217&single=true&output=csv',
-                    th: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSVNQZ9He56FI0mC4d1sODaF45FLXpqLova9aBVgQHFzzFzNiwJP_F1BSDBntCI6s5iaz37aGlK2Q3F/pub?gid=369450170&single=true&output=csv',
-                    id: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSVNQZ9He56FI0mC4d1sODaF45FLXpqLova9aBVgQHFzzFzNiwJP_F1BSDBntCI6s5iaz37aGlK2Q3F/pub?gid=1467238039&single=true&output=csv'
+                    ar: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRLB5LGapFpZdZUjamgEeSMSAE92DxG5JM1g-q3QBxjtICAkmtGIGtEy10aKJSoIP1YLi5eyCozdoyC/pub?gid=2026156602&single=true&output=csv',
+                    en: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRLB5LGapFpZdZUjamgEeSMSAE92DxG5JM1g-q3QBxjtICAkmtGIGtEy10aKJSoIP1YLi5eyCozdoyC/pub?gid=1709873212&single=true&output=csv',
+                    tr: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRLB5LGapFpZdZUjamgEeSMSAE92DxG5JM1g-q3QBxjtICAkmtGIGtEy10aKJSoIP1YLi5eyCozdoyC/pub?gid=932024028&single=true&output=csv',
+                    es: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRLB5LGapFpZdZUjamgEeSMSAE92DxG5JM1g-q3QBxjtICAkmtGIGtEy10aKJSoIP1YLi5eyCozdoyC/pub?gid=2126154876&single=true&output=csv',
+                    ru: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRLB5LGapFpZdZUjamgEeSMSAE92DxG5JM1g-q3QBxjtICAkmtGIGtEy10aKJSoIP1YLi5eyCozdoyC/pub?gid=1383179966&single=true&output=csv',
+                    ur: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRLB5LGapFpZdZUjamgEeSMSAE92DxG5JM1g-q3QBxjtICAkmtGIGtEy10aKJSoIP1YLi5eyCozdoyC/pub?gid=1356221249&single=true&output=csv',
+                    hi: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRLB5LGapFpZdZUjamgEeSMSAE92DxG5JM1g-q3QBxjtICAkmtGIGtEy10aKJSoIP1YLi5eyCozdoyC/pub?gid=1947060246&single=true&output=csv',
+                    fr: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRLB5LGapFpZdZUjamgEeSMSAE92DxG5JM1g-q3QBxjtICAkmtGIGtEy10aKJSoIP1YLi5eyCozdoyC/pub?gid=1967929524&single=true&output=csv',
+                    de: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRLB5LGapFpZdZUjamgEeSMSAE92DxG5JM1g-q3QBxjtICAkmtGIGtEy10aKJSoIP1YLi5eyCozdoyC/pub?gid=330421505&single=true&output=csv',
+                    zh: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRLB5LGapFpZdZUjamgEeSMSAE92DxG5JM1g-q3QBxjtICAkmtGIGtEy10aKJSoIP1YLi5eyCozdoyC/pub?gid=597359201&single=true&output=csv',
+                    ja: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRLB5LGapFpZdZUjamgEeSMSAE92DxG5JM1g-q3QBxjtICAkmtGIGtEy10aKJSoIP1YLi5eyCozdoyC/pub?gid=1140262731&single=true&output=csv',
+                    ko: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRLB5LGapFpZdZUjamgEeSMSAE92DxG5JM1g-q3QBxjtICAkmtGIGtEy10aKJSoIP1YLi5eyCozdoyC/pub?gid=961009172&single=true&output=csv',
+                    it: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRLB5LGapFpZdZUjamgEeSMSAE92DxG5JM1g-q3QBxjtICAkmtGIGtEy10aKJSoIP1YLi5eyCozdoyC/pub?gid=1885756520&single=true&output=csv',
+                    vi: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRLB5LGapFpZdZUjamgEeSMSAE92DxG5JM1g-q3QBxjtICAkmtGIGtEy10aKJSoIP1YLi5eyCozdoyC/pub?gid=37768217&single=true&output=csv',
+                    th: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRLB5LGapFpZdZUjamgEeSMSAE92DxG5JM1g-q3QBxjtICAkmtGIGtEy10aKJSoIP1YLi5eyCozdoyC/pub?gid=369450170&single=true&output=csv',
+                    id: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRLB5LGapFpZdZUjamgEeSMSAE92DxG5JM1g-q3QBxjtICAkmtGIGtEy10aKJSoIP1YLi5eyCozdoyC/pub?gid=1467238039&single=true&output=csv'
                 },
                 get isRTL() { return ['ar', 'ur'].includes(this.currentLang); },
                 handleScroll() { this.showCatBar = window.pageYOffset <= this.lastScroll; this.lastScroll = window.pageYOffset; },
@@ -362,39 +362,60 @@
                     if(audio) { audio.currentTime = 0; audio.volume = 0.4; audio.play().catch(()=>{}); }
                 },
 
-                async changeLanguage() {
-                    this.isLoading = true;
+                async fetchMenuRows(url) {
+                    const res = await fetch(url + '&t=' + Date.now(), { cache: 'no-store', signal: AbortSignal.timeout(20000) });
+                    if (!res.ok) throw new Error('Menu data could not be loaded');
+                    const text = await res.text();
+                    return Papa.parse(text, { header: false, skipEmptyLines: true }).data.slice(1)
+                        .filter(cols => /^TP-\d+$/.test((cols[0] || '').trim()));
+                },
+                async changeLanguage({ silent = false } = {}) {
+                    const lang = this.currentLang;
+                    const requestId = ++this.menuRequestId;
+                    if (!silent) this.isLoading = true;
                     try {
-                        const res = await fetch(this.langLinks[this.currentLang] + '&t=' + Date.now());
-                        const text = await res.text();
-                        Papa.parse(text, {
-                            header: false, skipEmptyLines: true,
-                            complete: (results) => {
-                                const rows = results.data.slice(1);
-                                this.categoryBgs = {};
-                                this.allRawData = rows.map(cols => {
-                                    let id = (cols[0] || '').trim();
-                                    let cat = (cols[1] || '').trim();
-                                    if(parseInt(id.replace('TP-','')) >= 250 && parseInt(id.replace('TP-','')) <= 400) this.categoryBgs[cat] = (cols[6] || '').trim();
-                                    return {
-                                        id: id, category: cat, name: (cols[2] || '').trim(),
-                                        price: (cols[3] || '').trim(), description: (cols[5] || '').trim(),
-                                        image: (cols[6] || '').trim(), available: cols.length > 10 ? (cols[10] || '').trim() : ''
-                                    }
-                                }).filter(i => i.id.startsWith('TP-'));
-                                
-                                this.activeMenuItems = this.allRawData.filter(i => i.available !== 'غير متوفر' && (parseInt(i.id.replace('TP-','')) < 250 || parseInt(i.id.replace('TP-','')) > 400));
-                                this.heroOffers = this.activeMenuItems.filter(i => this.targetHeroIds.includes(i.id));
-                                
-                                let dbExploreItems = this.allRawData.filter(i => ['الاستكشاف', 'Explore'].includes(i.category) && i.available !== 'غير متوفر');
-                                const vidBestSteakId = '11HoXmfaU1QxLnqsPY0EsPHB66WqZxB55';
-                                const directVids = [{ id: 'vid-beststeak', name: 'أفضل ستيك', image: `https://drive.google.com/file/d/${vidBestSteakId}/preview`, category: 'استكشاف', isDrive: true, custom: true }];
-                                this.activeExploreItems = [...directVids, ...dbExploreItems];
-
-                                this.isLoading = false;
-                            }
+                        // Prices, photos and availability always come from Abu Arish's master sheet.
+                        const [masterRows, languageRows] = await Promise.all([
+                            this.fetchMenuRows(this.langLinks.ar),
+                            lang === 'ar' ? Promise.resolve([]) : this.fetchMenuRows(this.langLinks[lang]).catch(() => [])
+                        ]);
+                        if (!masterRows.length) throw new Error('Menu data is empty');
+                        if (requestId !== this.menuRequestId || lang !== this.currentLang) return;
+                        const clean = value => {
+                            const text = String(value ?? '').trim();
+                            return /^#(?:REF!|ERROR!|N\/A|VALUE!|NAME\?|DIV\/0!|NUM!|NULL!)/i.test(text) ? '' : text;
+                        };
+                        const translations = new Map(languageRows.map(cols => [clean(cols[0]), cols]));
+                        const categories = new Map();
+                        masterRows.forEach(cols => {
+                            const translatedCategory = clean(translations.get(clean(cols[0]))?.[1]);
+                            if (translatedCategory && !categories.has(clean(cols[1]))) categories.set(clean(cols[1]), translatedCategory);
                         });
-                    } catch (e) { this.isLoading = false; }
+                        this.categoryBgs = {};
+                        this.allRawData = masterRows.map(cols => {
+                            const id = clean(cols[0]);
+                            const translated = translations.get(id) || [];
+                            const baseCategory = clean(cols[1]);
+                            const category = categories.get(baseCategory) || baseCategory;
+                            const number = parseInt(id.replace('TP-', ''));
+                            if (number >= 250 && number <= 400) this.categoryBgs[category] = clean(cols[6]);
+                            return {
+                                id, category, baseCategory, name: clean(translated[2]) || clean(cols[2]),
+                                price: clean(cols[3]), description: clean(translated[5]) || clean(cols[5]),
+                                image: clean(cols[6]), available: clean(cols[7])
+                            };
+                        });
+                        this.activeMenuItems = this.allRawData.filter(i => i.available !== 'غير متوفر' && (parseInt(i.id.replace('TP-', '')) < 250 || parseInt(i.id.replace('TP-', '')) > 400));
+                        this.heroOffers = this.activeMenuItems.filter(i => this.targetHeroIds.includes(i.id));
+                        const dbExploreItems = this.allRawData.filter(i => ['الاستكشاف', 'استكشاف', 'Explore'].includes(i.baseCategory) && i.available !== 'غير متوفر');
+                        const vidBestSteakId = '11HoXmfaU1QxLnqsPY0EsPHB66WqZxB55';
+                        const directVids = [{ id: 'vid-beststeak', name: 'أفضل ستيك', image: `https://drive.google.com/file/d/${vidBestSteakId}/preview`, category: 'استكشاف', isDrive: true, custom: true }];
+                        this.activeExploreItems = [...directVids, ...dbExploreItems];
+                    } catch (e) {
+                        console.warn('Menu refresh failed', e);
+                    } finally {
+                        if (requestId === this.menuRequestId) this.isLoading = false;
+                    }
                 },
                 get normalCategories() { return [...new Set(this.activeMenuItems.map(i => i.category))].filter(c => c); },
                 getCatItems(cat) { return this.activeMenuItems.filter(i => i.category === cat); },
@@ -405,7 +426,7 @@
                     this.showSearchModal = false;
                     this.$nextTick(() => {
                         setTimeout(() => {
-                            let targetCat = this.normalCategories.find(c => c.includes('مشوي') || c.toLowerCase().includes('grill'));
+                            let targetCat = this.activeMenuItems.find(i => i.baseCategory.includes('مشوي'))?.category;
                             if(targetCat) {
                                 const targetId = 'cat-' + btoa(unescape(encodeURIComponent(targetCat))).replace(/=/g, '');
                                 const el = document.getElementById(targetId);
@@ -452,6 +473,9 @@
                     const savedQ = localStorage.getItem('abu_arish_qty_v10'); if(savedQ) this.quantities = JSON.parse(savedQ);
                     this.changeLanguage(); 
                     setInterval(() => { this.startAutoScroll(); }, 5000);
+                    const refreshMenu = () => { if (!document.hidden && !this.isLoading) this.changeLanguage({ silent: true }); };
+                    setInterval(refreshMenu, 60000);
+                    document.addEventListener('visibilitychange', refreshMenu);
                 },
                 startAutoScroll() {
                     const slider = document.getElementById('hero-slider');
